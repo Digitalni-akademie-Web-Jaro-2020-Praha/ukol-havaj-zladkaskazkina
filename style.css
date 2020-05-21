@@ -1,0 +1,21 @@
+form {
+  width: 500px;
+  background-color: goldenrod;
+  margin: 20px auto;
+  padding: 10px;
+}
+
+.formboard {
+  display: flex;
+  justify-content: center;
+}
+.person1,
+.person2 {
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+}
+.check-btn {
+  display: block;
+  margin: 10px auto;
+}
