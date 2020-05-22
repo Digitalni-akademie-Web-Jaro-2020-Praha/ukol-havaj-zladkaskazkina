@@ -28,21 +28,21 @@ function checkIt() {
 
   if ((osoba1.uspory + osoba2.uspory) >= holidayCost) {
     if ((osoba1.uspory >= halfCost) && (osoba2.uspory >= halfCost)) {
-      return `You save enough to have a great holiday! You have ${osoba1.uspory + osoba2.uspory}`;
+      alert(`You save enough to have a great holiday! You have ${osoba1.uspory + osoba2.uspory}`);
     } else if (osoba1.uspory < halfCost) {
-      return `You could go, but ${osoba1.name} has to pay ${halfCost - osoba1.uspory}`;
+      alert(`You could go, but ${osoba1.name} has to pay ${halfCost - osoba1.uspory}`);
     } else {
-      return `You could go, but ${osoba2.name} has to pay ${halfCost - osoba2.uspory}`;
+      alert(`You could go, but ${osoba2.name} has to pay ${halfCost - osoba2.uspory}`);
     }
   } else {
     if ((osoba1.uspory < halfCost) && (osoba2.uspory < halfCost)) {
-      return `Try to save extra ${holidayCost - (osoba1.uspory + osoba2.uspory)}! 
+      alert(`Try to save extra ${holidayCost - (osoba1.uspory + osoba2.uspory)}! 
       ${osoba1.name} has to save extra ${halfCost - osoba1.uspory} and 
-              ${osoba2.name} has to save extra ${halfCost - osoba2.uspory}`;
+              ${osoba2.name} has to save extra ${halfCost - osoba2.uspory}`);
     } else if (osoba1.uspory < halfCost) {
-      return `${osoba1.name} has to save extra ${halfCost - osoba1.uspory}`;
+      alert(`${osoba1.name} has to save extra ${halfCost - osoba1.uspory}`);
     } else {
-      return `${osoba2.name} has to save extra ${halfCost - osoba2.uspory}`;
+      alert(`${osoba2.name} has to save extra ${halfCost - osoba2.uspory}`);
     }
   }
 }
