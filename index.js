@@ -10,7 +10,8 @@ const name1 = document.querySelector('.name1'),
   savings1 = document.querySelector('.save1'),
   savings2 = document.querySelector('.save2'),
   cost = document.querySelector('.cost'),
-  checkBtn = document.querySelector('.check-btn');
+  checkBtn = document.querySelector('.check-btn'),
+  respond = document.querySelector('.response');
 
 
 let holidayCost = 0;
@@ -28,21 +29,21 @@ function checkIt() {
 
   if ((osoba1.uspory + osoba2.uspory) >= holidayCost) {
     if ((osoba1.uspory >= halfCost) && (osoba2.uspory >= halfCost)) {
-      alert(`You save enough to have a great holiday! You have ${osoba1.uspory + osoba2.uspory}`);
+      respond.innerHTML = `<h2>You save enough to have a great holiday! You have ${osoba1.uspory + osoba2.uspory}</h2>`;
     } else if (osoba1.uspory < halfCost) {
-      alert(`You could go, but ${osoba1.name} has to pay ${halfCost - osoba1.uspory}`);
+      respond.innerHTML = `<h2>You could go, but ${osoba1.name} has to pay ${halfCost - osoba1.uspory}</h2>`;
     } else {
-      alert(`You could go, but ${osoba2.name} has to pay ${halfCost - osoba2.uspory}`);
+      respond.innerHTML = `<h2>You could go, but ${osoba2.name} has to pay ${halfCost - osoba2.uspory}</h2>`;
     }
   } else {
     if ((osoba1.uspory < halfCost) && (osoba2.uspory < halfCost)) {
-      alert(`Try to save extra ${holidayCost - (osoba1.uspory + osoba2.uspory)}! 
+      respond.innerHTML = `<h2>Try to save extra ${holidayCost - (osoba1.uspory + osoba2.uspory)}! 
       ${osoba1.name} has to save extra ${halfCost - osoba1.uspory} and 
-              ${osoba2.name} has to save extra ${halfCost - osoba2.uspory}`);
+              ${osoba2.name} has to save extra ${halfCost - osoba2.uspory}</h2>`;
     } else if (osoba1.uspory < halfCost) {
-      alert(`${osoba1.name} has to save extra ${halfCost - osoba1.uspory}`);
+      respond.innerHTML = `<h2>${osoba1.name} has to save extra ${halfCost - osoba1.uspory}</h2>`;
     } else {
-      alert(`${osoba2.name} has to save extra ${halfCost - osoba2.uspory}`);
+      respond.innerHTML = `<h2>${osoba2.name} has to save extra ${halfCost - osoba2.uspory}</h2>`;
     }
   }
 }

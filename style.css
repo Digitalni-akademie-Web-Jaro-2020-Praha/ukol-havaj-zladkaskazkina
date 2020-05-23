@@ -19,3 +19,6 @@ form {
   display: block;
   margin: 10px auto;
 }
+.response {
+  text-align: center;
+}
